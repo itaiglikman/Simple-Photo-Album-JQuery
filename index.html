@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <!-- font-awesome icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <h1>Your Album</h1>
+    <form action="" onsubmit="main()" class="mb-3">
+        <div class="inputContainer">
+            <div>
+                <p>image url:</p>
+                <input type="url" id="urlBox" class="form-control" title="This field should not be left blank." required>
+            </div>
+            <div>
+                <p>title:</p>
+                <input type="text" id="titleBox" pattern="[a-zA-Z]*" title="This field should contain only letters" required class="form-control">
+            </div>
+            <div>
+                <p>description:</p>
+                <textarea id="descriptionBox" class="form-control"></textarea>
+            </div>
+        </div>
+        <div id="btnDiv">
+            <button id="addBtn" class="btn btn-primary">add</button>
+            <button type="reset" id="resetBtn" onclick="clearFromStorage()" class="btn btn-primary">reset</button>
+        </div>
+    </form>
+
+    
+
+    <div id="cardsContainer"></div>
+
+</body>
+
+</html>
